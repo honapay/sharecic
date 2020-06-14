@@ -21,6 +21,7 @@ class InquiryTableSeeder extends Seeder
                 'holdUntil'=> '2020-08-31',
                 'inquiry_dateTime' => '20200305155628',
                 'phoneId_1'=> 1,
+                'phoneId_2'=>null,
                 'addressId'=>1,
                 'applyInquiryType'=>'契約者',
                 'applycontractType'=>'カード等',
