@@ -29,7 +29,7 @@ class CreateCicinquiryTable extends Migration
             $table->enum('applyInquiryType',['契約者','保証人']); //9.照会区分
             $table->enum('applycontractType',['カード等','個品割賦','リース','保証契約','無保証融資','保証融資','住宅ローン']); //10.申込区分
             $table->integer('applyAmount'); //11.契約予定額
-            $table->ingeger('applyCounts'); //12.支払予定回数
+            $table->integer('applyCounts'); //12.支払予定回数
             $table->integer('applyProductTypeId_1'); //13.商品名(1)ID
             $table->integer('applyProductTypeId_2'); //14.商品名(2)ID
             $table->integer('applyProductTypeId_3'); //15.商品名(3)ID
