@@ -23,8 +23,11 @@ class CreateCicinquiryTable extends Migration
             $table->dateTime('inquiry_dateTime'); //照会日時(申込->8.,利用->5.)
             
             // columns for application
+            $table->integer('phoneId_1'); //6.電話番号ID(1)
+            $table->integer('phoneId_2'); //7.電話番号ID(2)
+            $table->integer('addressId'); //5.住所ID 
             $table->integer('applyInquiryTypeId'); //9.照会区分
-            $table->integer('applyTypeId'); //10.申込区分
+            $table->integer('applyContractTypeId'); //10.申込区分
             $table->integer('applyAmount'); //11.契約予定額
             $table->ingeger('applyCounts'); //12.支払予定回数
             $table->integer('applyProductTypeId_1'); //13.商品名(1)ID
