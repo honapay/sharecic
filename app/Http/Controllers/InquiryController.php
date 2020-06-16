@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cicinquiry;
 use Illuminate\Http\Request;
 
 class InquiryController extends Controller
@@ -14,6 +15,10 @@ class InquiryController extends Controller
     public function index()
     {
         //
+        $data=Cicinquiry::all();
+        return view('inquiry/index',[
+            'collections'=>$data
+        ]);
     }
 
     /**
