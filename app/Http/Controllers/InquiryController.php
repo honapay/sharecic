@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cicinquiry;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class InquiryController extends Controller
 {
@@ -15,7 +16,9 @@ class InquiryController extends Controller
     public function index()
     {
         //
-        $data=Cicinquiry::all();
+        
+        $data=Cicinquiry::where('user_id',Auth::id())->get();
+
         return view('inquiry/index',[
             'collections'=>$data
         ]);
@@ -51,6 +54,8 @@ class InquiryController extends Controller
     public function show($id)
     {
         //
+        $data=Cicinquiry::where('user_id',Auth::id())->where('id',$id)->get();
+        dump($data);
     }
 
     /**
